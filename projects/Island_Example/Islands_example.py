@@ -55,26 +55,33 @@ def dft(col, row, matrix, visited):
         row = v[1]
     # Check if visited , If not...
         if not visited[row][col]:
-            visited[row][col] == True
+            # Mark it as visited
+            visited[row][col] = True
+            # Push each neighbor onto the top of the stack
             for neighbor in get_neighbors((col, row), matrix):
+                print("next--")
                 s.push(neighbor)
+    print("-", visited)
     return visited
+
 
 def get_neighbors(vertex, graph_matrix):
     col = vertex[0]
     row = vertex[1]
     neighbors = []
-    # Check north direction
+    # Check north
     if row > 0 and graph_matrix[row-1][col] == 1:
         neighbors.append((col, row-1))
-    # Check south direction 
+    # Check south
     if row < len(graph_matrix) - 1 and graph_matrix[row+1][col] == 1:
         neighbors.append((col, row+1))
-    # Check East direction
+    # Check east
     if col < len(graph_matrix[0]) - 1 and graph_matrix[row][col+1] == 1:
         neighbors.append((col+1, row))
+    # Check west
     if col > 0 and graph_matrix[row][col-1] == 1:
         neighbors.append((col-1, row))
+    # Return all directions that contain a 1
     return neighbors
 
 
