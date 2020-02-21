@@ -44,7 +44,7 @@ def find_ladders(begin_word, end_word):
     while q.size() > 0:
         path = q.dequeue()
 
-        w= path[-1]
+        w = path[-1]
 
         if w == end_word:
             return path
