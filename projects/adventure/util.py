@@ -1,5 +1,6 @@
 
 # Note: This Queue class is sub-optimal. Why?
+# Usually use a LinkedList
 class Queue():
     def __init__(self):
         self.queue = []
@@ -12,7 +13,7 @@ class Queue():
             return None
     def size(self):
         return len(self.queue)
-
+# Usually use an array
 class Stack():
     def __init__(self):
         self.stack = []

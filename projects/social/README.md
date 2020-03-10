@@ -28,7 +28,9 @@ Note that in the above example, the average number of friendships is exactly 2 b
 
 ## 2. Degrees of Separation
 
-Now that you have a graph full of users and friendships, you can crawl through their social graphs. `getAllSocialPaths()` takes a userID and returns a dictionary containing every user in that user's extended network along with the shortest friendship path between each.
+Now that you have a graph full of users and friendships, you can crawl through their social graphs. `getAllSocialPaths()` 
+takes a userID and 
+returns a dictionary containing every user in that user's extended network along with the shortest friendship path between each.
 
 ```
 >>> sg = SocialGraph()
